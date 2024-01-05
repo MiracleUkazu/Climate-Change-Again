@@ -48,6 +48,9 @@ app.get("/:read", (req, res) => {
     res.sendFile(path.join(initial_path, "read.html"));
 })
 
+app.use((req, res) => {
+    res.json("404");
+})
 
 app.listen("3000", () => {
     console.log('listening......');
